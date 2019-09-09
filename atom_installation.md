@@ -4,7 +4,7 @@
 
 ## Commands
 
-1. `wget -O atom-adm64.deb https://atom.io/download/deb`
+1. `wget -O atom-amd64.deb https://atom.io/download/deb`
 2. `sudo apt install gdebi-core` \(gdebi will be used to install .deb package\)
 3. `sudo gdebi atom-amd64.deb`
 
