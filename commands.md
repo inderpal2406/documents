@@ -36,3 +36,7 @@ To convert files from windows format to linux and vice versa. <br>
 To copy all files including hidden files and directories using `cp` command: <br>
 `cp -r /etc/skel /home/user` <br>
 Note that /home/user must not exist otherwise it'll create /home/user/skel <br>
+
+`hostname` : reveals the hostname <br>
+`hostname -f` : reveals the FQDN <br>
+`hostname -i` : reveals the IP address of the hostname
