@@ -40,3 +40,47 @@ Note that /home/user must not exist otherwise it'll create /home/user/skel <br>
 `hostname` : reveals the hostname <br>
 `hostname -f` : reveals the FQDN <br>
 `hostname -i` : reveals the IP address of the hostname
+
+To fetch all public IPs in azure <br>
+`az network public-ip list -o table > Azure_Public_IP.csv`
+
+ANSI escape quotes for different colors in bash. <br>
+Black        0;30     Dark Gray     1;30
+Red          0;31     Light Red     1;31
+Green        0;32     Light Green   1;32
+Brown/Orange 0;33     Yellow        1;33
+Blue         0;34     Light Blue    1;34
+Purple       0;35     Light Purple  1;35
+Cyan         0;36     Light Cyan    1;36
+Light Gray   0;37     White         1;37
+
+And then use them like this in our script:
+```
+RED='\033[0;31m'
+NC='\033[0m' # No Color
+printf "I ${RED}love${NC} Stack Overflow\n"
+```
+
+If we are using the echo command, be sure to use the -e flag to allow backslash escapes.
+`echo -e "I ${RED}love${NC} Stack Overflow"`
+
+How to negate a condition in if in bash? <br>
+```
+if ! [[ -d /root/backup ]]
+then
+    mkdir /root/backup
+fi
+```
+Above code will test if /root/backup exists or not and will create it if it doesn't exists.
+
+`tar -cvf test.tar test1 test2` <br>
+`tar -cvf dir.tar ./dir/` <br>
+`tar -cvzf test.tar.gz test1 test2` <br>
+`tar -xvf test.tar` <br>
+`tar -xvf test.tar -C ./unpack/` (provided \./unpack/ exists) <br>
+`tar -xvf test.tar.gz` <br>
+If we extract and a new directory get created after extract, then it means that while zipping it, the directory was zipped and not individual files. <br>
+`tar -czf $BACKUP_DIR/gitlab-$CURRENT_VERSION.tar.gz gitlab-runner > /dev/null 2>&1` creates error of redirection. So, <br>
+`tar -czf $BACKUP_DIR/gitlab-$CURRENT_VERSION.tar.gz gitlab-runner 2>/dev/null 1>/dev/null`
+
+`curl -L --output /path_of_download https://link-to-download > /dev/null 2>&1` creates no error of redirection.
