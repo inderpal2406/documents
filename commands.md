@@ -83,4 +83,11 @@ If we extract and a new directory get created after extract, then it means that 
 `tar -czf $BACKUP_DIR/gitlab-$CURRENT_VERSION.tar.gz gitlab-runner > /dev/null 2>&1` creates error of redirection. So, <br>
 `tar -czf $BACKUP_DIR/gitlab-$CURRENT_VERSION.tar.gz gitlab-runner 2>/dev/null 1>/dev/null`
 
-`curl -L --output /path_of_download https://link-to-download > /dev/null 2>&1` creates no error of redirection.
+**curl**
+
+`curl -L --output /path_of_download https://link-to-download > /dev/null 2>&1` <br>
+-L: to follow redirections (if any) in webpages. <br>
+--output: to specify download path. We need to specify a name for the file in the download path. The downloaded file will have this name. If we don't specify any name or just specify the directory name in which we want to downoad, then downoaded file will fail. <br>
+`curl -O https://bootstrap.pypa.io/get-pip.py` <br>
+-O: write ouput to a local file named like the remote file we get. <br>
+Acombination of both -O --output doesn't work to download remote file with same remote name but in a different directory. <br>
