@@ -91,3 +91,8 @@ If we extract and a new directory get created after extract, then it means that 
 `curl -O https://bootstrap.pypa.io/get-pip.py` <br>
 -O: write ouput to a local file named like the remote file we get. <br>
 Acombination of both -O --output doesn't work to download remote file with same remote name but in a different directory. <br>
+
+**git**
+
+To clone a single remote branch into local repo. <br>
+`git clone --single-branch --branch <branch_name> git@github.com:/shady/repo.git`
