@@ -96,3 +96,5 @@ Acombination of both -O --output doesn't work to download remote file with same 
 
 To clone a single remote branch into local repo. <br>
 `git clone --single-branch --branch <branch_name> git@github.com:/shady/repo.git`
+
+[Guide for .gitignore file](https://www.atlassian.com/git/tutorials/saving-changes/gitignore)
