@@ -90,7 +90,11 @@ If we extract and a new directory get created after extract, then it means that 
 --output: to specify download path. We need to specify a name for the file in the download path. The downloaded file will have this name. If we don't specify any name or just specify the directory name in which we want to downoad, then downoaded file will fail. <br>
 `curl -O https://bootstrap.pypa.io/get-pip.py` <br>
 -O: write ouput to a local file named like the remote file we get. <br>
-Acombination of both -O --output doesn't work to download remote file with same remote name but in a different directory. <br>
+A combination of both -O --output doesn't work to download remote file with same remote name but in a different directory. <br>
+`curl -u user:password https://url` <br>
+Above command will specify user and password to access the url. However, this will make the password visible when we view the history of commands. <br>
+`curl -u user https://url` <br>
+By specifying only user, we'll be prompted to enter password on terminal and the password won't be recorded in history. While we enter password, it is invisible as it is always in Unix prompt.
 
 **git**
 
