@@ -94,7 +94,8 @@ A combination of both -O --output doesn't work to download remote file with same
 `curl -u user:password https://url` <br>
 Above command will specify user and password to access the url. However, this will make the password visible when we view the history of commands. <br>
 `curl -u user https://url` <br>
-By specifying only user, we'll be prompted to enter password on terminal and the password won't be recorded in history. While we enter password, it is invisible as it is always in Unix prompt.
+By specifying only user, we'll be prompted to enter password on terminal and the password won't be recorded in history. While we enter password, it is invisible as it is always in Unix prompt. <br>
+Instead of --output, we can even use -o flag (lower case letter 0)
 
 **git**
 
