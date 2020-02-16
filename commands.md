@@ -21,6 +21,15 @@ This will update APT repositories.
 `sudo apt upgrade` <br>
 This will update packages to available newer versions.
 
+`sudo apt-cache search gcc` <br>
+This will search online repositories for a package named gcc. It'll list packages with gcc in their name and not just packages named as gcc. It is necessary to run `sudo apt-get update -y` before running this command.
+
+` sudo yum update -y`
+
+`sudo yum install -y gcc openssl-devel`
+
+`sudo yum search gcc`
+
 `echo ${!i}` Indirect variable substitution in bash.<br>
 [Click here](https://stackoverflow.com/questions/57957477/how-to-perform-variable-substitution-in-bash-scripting?noredirect=1#comment102327282_57957477) for more info.
 
